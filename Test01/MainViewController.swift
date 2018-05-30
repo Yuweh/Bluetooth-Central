@@ -17,8 +17,8 @@ class MainViewController: UIViewController, TransferServiceScannerDelegate {
     
     var centralManager: CBCentralManager!
     var scanner: TransferServiceScanner!
-    var isBluetoothPoweredOn: Bool = false
-    var isScanning: Bool = false
+    var isBluetoothPoweredOn: Bool = true
+    var isScanning: Bool = true
 
     
     override func viewDidLoad() {
@@ -31,14 +31,22 @@ class MainViewController: UIViewController, TransferServiceScannerDelegate {
     
     
     @IBAction func SearchBtnPressed(_ sender: UIBarButtonItem) {
-
-        if isScanning && isBluetoothPoweredOn {
-            scanner.stopScan()
-        } else if isScanning && !isBluetoothPoweredOn {
+        //Problem with this code
+        if !isBluetoothPoweredOn {
+            print("Turn Bluetooth On")
             self.showAlertSettings()
-        } else  if !isScanning && isBluetoothPoweredOn {
+        } else {
+            print("Now Process")
             scanner.startScan()
         }
+        
+//        if isScanning && isBluetoothPoweredOn {
+//            scanner.stopScan()
+//        } else if isScanning && !isBluetoothPoweredOn {
+//            self.showAlertSettings()
+//        } else  if !isScanning && isBluetoothPoweredOn {
+//            scanner.startScan()
+//        }
         
 //        if !isBluetoothPoweredOn {
 //            print("Turn Bluetooth On")
