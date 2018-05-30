@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		6983DDE720BD300B00919414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6983DDE620BD300B00919414 /* AppDelegate.swift */; };
-		6983DDE920BD300B00919414 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6983DDE820BD300B00919414 /* ViewController.swift */; };
+		6983DDE920BD300B00919414 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6983DDE820BD300B00919414 /* MainViewController.swift */; };
 		6983DDEC20BD300B00919414 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6983DDEA20BD300B00919414 /* Main.storyboard */; };
 		6983DDEE20BD300B00919414 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6983DDED20BD300B00919414 /* Assets.xcassets */; };
 		6983DDF120BD300B00919414 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6983DDEF20BD300B00919414 /* LaunchScreen.storyboard */; };
 		6983DDFC20BD300B00919414 /* Test01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6983DDFB20BD300B00919414 /* Test01Tests.swift */; };
 		6983DE0720BD300B00919414 /* Test01UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6983DE0620BD300B00919414 /* Test01UITests.swift */; };
+		6983DE1520BD4ABB00919414 /* TransferServiceScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6983DE1420BD4ABB00919414 /* TransferServiceScanner.swift */; };
+		6983DE1720BD508A00919414 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6983DE1620BD508A00919414 /* Const.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		6983DDE320BD300B00919414 /* Test01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6983DDE620BD300B00919414 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6983DDE820BD300B00919414 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6983DDE820BD300B00919414 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6983DDEB20BD300B00919414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6983DDED20BD300B00919414 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6983DDF020BD300B00919414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		6983DE0220BD300B00919414 /* Test01UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test01UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6983DE0620BD300B00919414 /* Test01UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test01UITests.swift; sourceTree = "<group>"; };
 		6983DE0820BD300B00919414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6983DE1420BD4ABB00919414 /* TransferServiceScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferServiceScanner.swift; sourceTree = "<group>"; };
+		6983DE1620BD508A00919414 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				6983DDE620BD300B00919414 /* AppDelegate.swift */,
-				6983DDE820BD300B00919414 /* ViewController.swift */,
+				6983DDE820BD300B00919414 /* MainViewController.swift */,
+				6983DE1420BD4ABB00919414 /* TransferServiceScanner.swift */,
+				6983DE1620BD508A00919414 /* Const.swift */,
 				6983DDEA20BD300B00919414 /* Main.storyboard */,
 				6983DDED20BD300B00919414 /* Assets.xcassets */,
 				6983DDEF20BD300B00919414 /* LaunchScreen.storyboard */,
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6983DDE920BD300B00919414 /* ViewController.swift in Sources */,
+				6983DDE920BD300B00919414 /* MainViewController.swift in Sources */,
+				6983DE1720BD508A00919414 /* Const.swift in Sources */,
 				6983DDE720BD300B00919414 /* AppDelegate.swift in Sources */,
+				6983DE1520BD4ABB00919414 /* TransferServiceScanner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,9 +435,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q3EJJ6M7CU;
 				INFOPLIST_FILE = Test01/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tektosworld.Test01;
+				PRODUCT_BUNDLE_IDENTIFIER = com.XiApps.Test02;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -441,9 +451,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q3EJJ6M7CU;
 				INFOPLIST_FILE = Test01/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tektosworld.Test01;
+				PRODUCT_BUNDLE_IDENTIFIER = com.XiApps.Test02;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
